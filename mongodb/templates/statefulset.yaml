@@ -11,9 +11,9 @@ spec:
     matchLabels:
       app: mongodb
       project: roboshop 
-      tier: db # has to match .spec.template.metadata.labels
+      tier: db # has to match .spec.template.metadata.label
   serviceName: "mongodb"
-  replicas: {{ .Values.statefulset.replica }}
+  replicas: {{ .Values.statefulset.replicas }}
   minReadySeconds: 10 # by default is 0
   template:
     metadata:
