@@ -1,3 +1,7 @@
-statefulset: 
-  replicas: "1" 
+# statefulset: 
+#   replicas: "1" 
+#   imageVersion: "v1"
+
+statefulset:
+  replicas: 3
   imageVersion: "v1"
