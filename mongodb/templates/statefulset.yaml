@@ -13,7 +13,7 @@ spec:
       project: roboshop 
       tier: db # has to match .spec.template.metadata.label
   serviceName: "mongodb"
-  replicas: {{ .Values.statefulset.replicas }}
+  replicas: 1
   minReadySeconds: 10 # by default is 0
   template:
     metadata:
