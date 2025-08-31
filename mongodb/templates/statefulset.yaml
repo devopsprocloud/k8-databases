@@ -13,7 +13,8 @@ spec:
       project: roboshop 
       tier: db # has to match .spec.template.metadata.label
   serviceName: "mongodb"
-  replicas: {{ .Values.statefulset.replicas }}
+  # replicas: {{ .Values.statefulset.replicas }}
+  replicas: 1
   template:
     metadata:
       labels:
