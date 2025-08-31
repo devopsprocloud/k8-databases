@@ -1,4 +1,4 @@
 statefulset: 
-  # replicas: 1
+  replicas: 1
   imageVersion: v1
 
