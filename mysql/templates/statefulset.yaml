@@ -26,9 +26,12 @@ spec:
       containers:
       - name: mysql
         image: "devopsprocloud/mysql:{{ .Values.statefulset.imageVersion }}"
+        envFrom:
+          - secretRef: 
+            name: mysql
         volumeMounts:
         - name: mysql
-          mountPath: /data/db
+          mountPath: /var/lib/mysql
   volumeClaimTemplates:
   - metadata:
       name: mysql 
