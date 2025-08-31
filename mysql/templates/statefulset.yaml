@@ -27,8 +27,8 @@ spec:
       - name: mysql
         image: "devopsprocloud/mysql:{{ .Values.statefulset.imageVersion }}"
         envFrom:
-          - secretRef: 
-            name: mysql
+        - secretRef: 
+          name: mysql
         volumeMounts:
         - name: mysql
           mountPath: /var/lib/mysql
