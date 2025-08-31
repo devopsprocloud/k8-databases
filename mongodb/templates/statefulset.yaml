@@ -15,7 +15,7 @@ spec:
       tier: db # has to match .spec.template.metadata.label
   serviceName: "mongodb"
   # replicas: {{ .Values.statefulset.replicas }}
-  replicas: 1
+  replicas: {{ .Values.statefulset.replicas }}
   template:
     metadata:
       labels:
