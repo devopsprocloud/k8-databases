@@ -1,0 +1,9 @@
+# Creating ConfigMap
+apiVersion: v1 
+kind: ConfigMap 
+metadata: 
+  name: user 
+  namespace: roboshop 
+data: 
+  MONGO: "true"
+---
