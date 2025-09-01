@@ -11,6 +11,9 @@ data:
       - roboshop-pod-reader
       userarn: arn:aws:iam::221082195538:user/prem
       username: prem
+      - roboshop-admin
+      userarn: arn:aws:iam::221082195538:user/admin
+      username: admin
 
 kind: ConfigMap
 metadata:
