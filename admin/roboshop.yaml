@@ -40,7 +40,7 @@ metadata:
   name: roboshop-cluster-reader
 rules:
 - apiGroups: [""] # "" indicates the core API group
-  resources: ["secrets", "pods", "nodes", "persistentvolumes"]
+  resources: ["secrets", "nodes", "persistentvolumes"]
   verbs: ["get", "watch", "list"]
 
 --- 
