@@ -11,7 +11,7 @@ data:
       - roboshop-pod-reader
       userarn: arn:aws:iam::221082195538:user/prem
       username: prem
-    -groups:
+    - groups:
       - roboshop-admin
       userarn: arn:aws:iam::221082195538:user/admin
       username: admin
