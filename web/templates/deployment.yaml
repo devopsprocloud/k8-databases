@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: roboshop 
+  labels:
+    app: web
+    project: roboshop 
+    tier: web
+spec:
+  # modify replicas according to your case
+  replicas: {{ .Values.deployment.replicas }}
+  selector: # replica labels 
+    matchLabels:
+      app: web
+      project: roboshop 
+      tier: web
+  template: # pod-definition
+    metadata:
+      labels:
+        app: web
+        project: roboshop 
+        tier: web
+    spec:
+      volumes: 
+      - name: nginx-conf 
+        configMap: 
+          name: web # config map name
+          items: 
+          - key: nginx.conf 
+            path: nginx.conf  
+      containers:
+      - name: web
+        image: "devopsprocloud/web:{{ .Values.deployment.imageVersion }}"
+        imagePullPolicy: Always 
+        resources: 
+          requests: 
+            cpu: "50m"
+            memory: "64Mi"
+          limits:
+            cpu: "100m" 
+            memory: "128Mi"
+        volumeMounts:
+          - name: nginx-conf # volume name
+            mountPath: /etc/nginx/nginx.conf # where you want to mount the volume
+            subPath: nginx.conf # path of the volume
+            readOnly: true    
+--- 
+
