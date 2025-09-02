@@ -27,8 +27,8 @@ spec:
       - name: mysql
         image: "devopsprocloud/mysql:{{ .Values.statefulset.imageVersion }}"
         envFrom:
-        - secretRef: 
-            name: mysql
+        # - secretRef: 
+        #     name: mysql
         - configMapRef: 
             name: mysql
         volumeMounts:
