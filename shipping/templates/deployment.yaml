@@ -25,7 +25,8 @@ spec:
     spec:
       containers:
       - name: shipping
-        image: "devopsprocloud/shipping:{{ .Values.deployment.imageVersion }}"
+        #image: "devopsprocloud/shipping:{{ .Values.deployment.imageVersion }}"
+        image: "joindevops/shipping:{{ .Values.deployment.imageVersion }}"
         imagePullPolicy: Always 
         resources: 
           requests: 
