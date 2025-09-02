@@ -27,12 +27,9 @@ spec:
       - name: mysql
         image: "devopsprocloud/mysql:{{ .Values.statefulset.imageVersion }}"
         envFrom:
-          - secretRef: 
-              name: mysql
-          - configMapRef: 
-              name: mysql
-        ports: 
-          - containerPort: 3306
+        - secretRef: 
+            name: mysql
+        - configMapRef: 
             name: mysql
         volumeMounts:
         - name: mysql
