@@ -9,6 +9,10 @@ metadata:
     project: roboshop 
     tier: app
 spec:
+  selector:
+    app: user
+    project: roboshop 
+    tier: app
   ports:
   - protocol: TCP 
     port: 8080 #service port 
