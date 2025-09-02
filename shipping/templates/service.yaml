@@ -4,10 +4,6 @@ kind: Service
 metadata:
   name: shipping
   namespace: roboshop
-  labels:
-    app: shipping
-    project: roboshop 
-    tier: app
 spec:
   selector:
     app: shipping
