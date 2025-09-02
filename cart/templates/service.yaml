@@ -10,7 +10,7 @@ metadata:
     tier: app
 spec:
   selector:
-    app: user
+    app: cart
     project: roboshop 
     tier: app
   ports:
