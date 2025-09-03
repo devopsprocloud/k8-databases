@@ -58,6 +58,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/tags: Environment=dev,Team=test,Project=RoboShop
     alb.ingress.kubernetes.io/group.name: roboshop
+    alb.ingress.kubernetes.io/healthcheck-path: /health 
 spec:
   ingressClassName: alb # important
   rules:
