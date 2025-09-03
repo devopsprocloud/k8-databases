@@ -31,7 +31,7 @@ spec:
             path: nginx.conf  
       containers:
       - name: web
-        image: "joindevops/web:{{ .Values.deployment.imageVersion }}"
+        image: "devopsprocloud/web:{{ .Values.deployment.imageVersion }}"
         imagePullPolicy: Always 
         resources: 
           requests: 
