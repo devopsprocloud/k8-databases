@@ -61,7 +61,7 @@ metadata:
 spec:
   ingressClassName: alb # important
   rules:
-  - host: "roboshop.devopsprocloud.in"
+  - host: "*"
     http:
       paths:
       - pathType: Prefix
