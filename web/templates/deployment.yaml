@@ -31,7 +31,7 @@ spec:
             path: nginx.conf  
       containers:
       - name: web
-        image: "devopsprocloud/web:{{ .Values.deployment.imageVersion }}"
+        image: "joindevops/web:{{ .Values.deployment.imageVersion }}"
         imagePullPolicy: Always 
         resources: 
           requests: 
@@ -46,29 +46,29 @@ spec:
             subPath: nginx.conf # path of the volume
             readOnly: true    
 --- 
-# Ingress resource
+# # Ingress resource
 
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: web
-  namespace: roboshop
-  annotations:
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/tags: Environment=dev,Team=test,Project=RoboShop
-    alb.ingress.kubernetes.io/group.name: roboshop
-spec:
-  ingressClassName: alb # important
-  rules:
-  - host: "roboshop.devopsprocloud.in"
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: web
-            port:
-              number: 80
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: web
+#   namespace: roboshop
+#   annotations:
+#     alb.ingress.kubernetes.io/scheme: internet-facing
+#     alb.ingress.kubernetes.io/target-type: ip
+#     alb.ingress.kubernetes.io/tags: Environment=dev,Team=test,Project=RoboShop
+#     alb.ingress.kubernetes.io/group.name: roboshop
+# spec:
+#   ingressClassName: alb # important
+#   rules:
+#   - host: "roboshop.devopsprocloud.in"
+#     http:
+#       paths:
+#       - pathType: Prefix
+#         path: "/"
+#         backend:
+#           service:
+#             name: web
+#             port:
+#               number: 80
 
