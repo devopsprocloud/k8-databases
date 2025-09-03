@@ -16,6 +16,7 @@ spec:
       app: shipping
       project: roboshop 
       tier: app
+  serviceName: "shipping"
   template: # pod-definition
     metadata:
       labels:
