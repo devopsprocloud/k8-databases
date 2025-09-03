@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: cart
-        image: "joindevops/cart:{{ .Values.deployment.imageVersion }}"
+        image: "devopsprocloud/cart:{{ .Values.deployment.imageVersion }}"
         imagePullPolicy: Always 
         resources: 
           requests: 
