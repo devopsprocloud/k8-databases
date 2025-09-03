@@ -16,6 +16,7 @@ spec:
       app: payment
       project: roboshop 
       tier: app
+  # serviceName: "payment"
   template: # pod-definition
     metadata:
       labels:
