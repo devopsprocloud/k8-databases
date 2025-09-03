@@ -61,7 +61,7 @@ metadata:
 spec:
   ingressClassName: alb # important
   rules:
-  - host: "*"
+  - host: "*.devopsprocloud.in"
     http:
       paths:
       - pathType: Prefix
