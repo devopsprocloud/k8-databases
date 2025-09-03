@@ -48,37 +48,6 @@ spec:
 --- 
 # Ingress resource
 
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: app2
-  labels:
-    app: app2
-spec:
-  # modify replicas according to your case
-  replicas: 1
-  selector: # replica labels 
-    matchLabels:
-      app: app2
-  template: # pod-definition
-    metadata:
-      labels:
-        app: app2
-    spec:
-      containers:
-      - name: app2
-        image: devopsprocloud/app2:v1
-        imagePullPolicy: Always 
-        resources: 
-          requests: 
-            cpu: "50m"
-            memory: "128Mi"
-          limits: 
-            cpu: "100m"
-            memory: "256Mi"
----
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
